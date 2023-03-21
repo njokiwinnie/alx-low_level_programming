@@ -1,8 +1,6 @@
 #include "main.h"
 /**
- * main - check code
- * print alpphabet iin lower case
- * Return: Always 0.
+ * print_alphabet: prints alphabet in lower case
  */
 void print_alphabet(void)
 {
