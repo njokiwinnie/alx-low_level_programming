@@ -5,9 +5,14 @@
  * Return: the absolute value of n
  */
 
-int _abs(int)
+int _abs(int r)
 {
 	if (r < 0)
-		_putchar('-')
-	return(r < 0 ? -r : r);
+	{
+		int abs_val
+
+		abs_val = r * -1;
+		return (abs_val);
+	}
+	return (r);
 }
