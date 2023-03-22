@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_to_98 - pprints aall natural numbers from n to 98
+ * print_to_98 - prints aall natural numbers from n to 98
  * @n: starting number
  */
 void print_to_98(int n)
@@ -25,4 +25,4 @@ void print_to_98(int n)
 		}
 	}
 	print("\n");
-i}
+}
