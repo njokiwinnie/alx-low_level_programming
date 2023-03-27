@@ -1,17 +1,27 @@
-#include "main.h"
+#include <stdio.h>
 #include <string.h>
+#include "main.h"
+
 /**
  * puts_half - prints half of a string
- * @str: string of chatacter
+ * @str: string for manipulation
+ *
+ * Return: None
  */
 void puts_half(char *str)
 {
-	int len = strlen(str);
-	int half_len = (len + 1) / 2;
-	int i;
+	int i, len, mid;
 
-	for (int i = half_len; i < len; i++)
-	       printf("%c", str[i]);
+	len = strlen(str);
 
-	printf('\n');
-}	
+	if (len % 2 == 0)
+		mid = (len / 2);
+	else
+		mid = (len + 1) / 2;
+
+	for (i = mid; (str[i] != '\0') ; i++)
+	{
+		printf("%c", str[i]);
+	}
+	printf("\n");
+}
