@@ -1,18 +1,27 @@
-#include "main.h"
 #include <string.h>
+#include "main.h"
+
 /**
- * rev_string - reverse sring
- * @s: string of character
+ * rev_string - rev a string
+ * @s: string array
+ *
+ * Return: None
  */
 void rev_string(char *s)
 {
-	int len = strlen(s);
 	int i;
+	char v[2000];
+	int len = strlen(s);
 
-	for (i = 0; i < len / 2; i++)
+	for (i = 0; i < len; i++)
 	{
-		char temp = *(s + 1);
-		*(s + i) = *(s + len - i - 1);
-		*(s + len - i - 1) = temp;
+		v[i] = s[len - i - 1];
+	}
+	v[len] = '\0';
+
+	for (i = 0; i < len; i++)
+	{
+		s[i] = v[i];
 	}
 }
+
