@@ -11,9 +11,9 @@ char *cap_string(char *n)
 
 	i = 0;
 
-	while (n[i] >= 'a' && n[i] <= 'z')
+	while (n[i] != '\0')
 	{
-		if (n[i] - 1 == ' ' ||
+		if ((n[i] - 1 == ' ' ||
 		    n[i] - 1 == ',' ||
 		    n[i] - 1 == ';' ||
 		    n[i] - 1 == '.' ||
@@ -26,8 +26,12 @@ char *cap_string(char *n)
 		    n[i] - 1 == '}' ||
 		    n[i] - 1 == '\n' ||
 		    n[i] - 1 == '\t' ||
-		    i == 0)
+		    i == 0 ) && n[i] >= 'a' && n[i] <= 'z')
 			n[i] -= 32;
+		else if (n[i] >= 'A' && n[i] <= 'Z')
+		{
+			n[i] += 32;
+		}
 		i++;
 	}
 	return (n);
