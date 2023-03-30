@@ -26,12 +26,8 @@ char *cap_string(char *n)
 		    n[i] - 1 == '}' ||
 		    n[i] - 1 == '\n' ||
 		    n[i] - 1 == '\t' ||
-		    i == 0 ) && n[i] >= 'a' && n[i] <= 'z')
+		    i == 0) && n[i] >= 'a' && n[i] <= 'z')
 			n[i] -= 32;
-		else if (n[i] >= 'A' && n[i] <= 'Z')
-		{
-			n[i] += 32;
-		}
 		i++;
 	}
 	return (n);
