@@ -2,24 +2,24 @@
 #include <stdio.h>
 
 /**
- * print_list - prints elements of a list
- * @h: pointer to the first node
- * Return: number of nodes in list as size_t
+ * print_list - prints all the elements of a list_t list
+ * @h: pointer to the head of the list
+ *
+ * Return: the number of nodes
  */
 size_t print_list(const list_t *h)
 {
-	unsigned int nodes = 0;
+	size_t count = 0;
 
-	while (h)
+	while (h != NULL)
 	{
-		printf("[%u] ", h->len);
 		if (h->str == NULL)
-			printf("(nil)\n");
-		else
-			printf("%s\n", h->str);
-
-		h = h->next;
-		nodes++;
+		printf("[0] (nil)\n");
+	else
+		printf("[%u] %s\n", h->len, h->str);
+	h = h->next;
+	count++;
 	}
-	return (nodes);
+
+	return (count);
 }
